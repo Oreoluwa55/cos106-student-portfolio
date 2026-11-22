@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Planner | Oreoluwa Idowu</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Oreoluwa<span>.Idowu</span></a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html" class="active">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <h1>Academic Task Planner</h1>
+    <p class="lead">Manage Miva Open University assignments, lab submissions, and study milestones.</p>
+
+    <section class="planner-wrapper">
+      <form id="task-form" class="card planner-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="task-title">Task Description</label>
+            <input type="text" id="task-title" placeholder="e.g., Deploy COS 106 Portfolio to GitHub Pages" required />
+          </div>
+          <div class="form-group">
+            <label for="task-course">Course Code</label>
+            <select id="task-course">
+              <option value="COS 106">COS 106 - Introduction to Web Technologies</option>
+              <option value="COS 102">COS 102 - Problem Solving</option>
+              <option value="MTH 101">MTH 101 - Elementary Mathematics I</option>
+              <option value="MTH 102">MTH 102 - Elementary Mathematics II</option>
+              <option value="GST 112">GST 112 - Nigerian Peoples and Culture</option>
+              <option value="GST 122">GST 122 - Communication in English II</option>
+              <option value="GST 127">GST 127 - General Studies (GST 127)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="task-date">Due Date</label>
+            <input type="date" id="task-date" required />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Academic Task</button>
+      </form>
+
+      <div class="planner-stats">
+        <span id="task-counter">0 tasks remaining</span>
+      </div>
+
+      <ul id="task-list" class="task-list">
+        <!-- Tasks are dynamically injected here by js/planner.js -->
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Oreoluwa Idowu • Miva Open University (COS 106 Term Project)</p>
+    </div>
+  </footer>
+
+  <script src="js/planner.js"></script>
+</body>
+</html>
